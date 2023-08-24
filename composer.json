@@ -1,0 +1,29 @@
+{
+    "name": "natha/portfolio",
+    "description": "Projet de site perso",
+    "license": "CopyLeft",
+    "autoload": {
+        "psr-4": {
+            "Natha\\Portfolio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nathan NICART",
+            "email": "nathan.nicart@etudiant.univ-reims.fr"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.17"
+    },
+    "scripts": {
+        "start:linux": "bin/run-server.sh -t0 -d auto_prepend_file=\"$PWD/vendor/autoload.php\"",
+        "start:windows": [
+            "Composer\\Config::disableProcessTimeout",
+            "bin/run-server.bat"
+        ]
+    }
+}
